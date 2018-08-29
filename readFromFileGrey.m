@@ -1,0 +1,9 @@
+% function [saida] = nomeFunc(entrada) end
+function [img] = readFromFileGrey(pathImg)
+    % Abrindo imagem
+    temp = imread(pathImg)
+    % Converte o RGB em escala de cinza
+    img = rgb2gray(temp)
+    % Salvando no workspace a imagem
+    assignin('base','ImagemPB',img)    
+end
