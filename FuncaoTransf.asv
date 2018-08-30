@@ -1,0 +1,18 @@
+function [vec] = FuncaoTransf(pixel)
+       % Definindo um vetor de 256 posicoes para ser a funcao de
+       % transferencia
+        funcTransf = uint8.empty(256,0);
+        for a = 1:size(funcTransf,1)
+            funcTransf(a) = 0 ;
+        end
+       
+        for b = 1:size(funcTransf,1)
+            % funcao de transferen
+            funcTransf(b) = -1* double(img(linhaImg,colunaImg)) + 255 ;
+        end
+        
+            % Deixar janela aberta, para rodar em escala de cinza com o
+            % mapa de cores correto
+            colormap(gray(256));       
+          assignin('base','ImgTransf',img)
+end

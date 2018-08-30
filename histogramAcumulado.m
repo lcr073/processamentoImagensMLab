@@ -1,7 +1,7 @@
 function [vec] = histogramAcumulado(histOrig)
 
     % Vetor do histograma acumulado
-    HistAcul = uint8.empty(256,0);
+    HistAcul = uint32.empty(256,0);
     for a = 1:size(HistAcul,1)
         HistAcul(a) = 0 ;
     end

@@ -2,7 +2,7 @@ function [vec] = histogramG2(img)
     %Criando vetor vazio
     
     imagem = img
-    Vec = uint16.empty(256,0)
+    Vec = uint32.empty(256,0)
     for a = 1:size(Vec,1)
        Vec(a) = 0 ;
     end
