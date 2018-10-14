@@ -1,9 +1,0 @@
-% function [saida] = nomeFunc(entrada) end
-function [img] = rgb2hsi(Img)
-    % Converte o RGB em HSI
-    img = rgb2hsi(temp)
-    % Salvando no workspace a imagem
-    assignin('base','ImagemHSI',img)    
-    
-    image
-end

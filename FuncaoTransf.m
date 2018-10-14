@@ -8,9 +8,24 @@ function [vec] = FuncaoTransf()
        
         for b = 1:size(funcTransf,2)
             % funcao de transferencia para inverter imagem
-            funcTransf(b) = -1* double(b) + 255 ;
+           % funcTransf(b) = b ;            
+            
+            % funcao de transferencia para inverter imagem
+            %funcTransf(b) = -1* double(b) + 255 ;
+            
+            % funcao metade metade
+            if b < 129
+                funcTransf(b) = 2*b;
+            else
+                funcTransf(b) = -2 * double(b) + 510;
+            end
+
+            % funcao fusca
+            %funcTransf(b) = 45.98* log(b + 1);
+            
+            % funcao de transferencia para normalizar imagem
         end
             % plot para exibir a funcao de transferencia
-          assignin('base','funcTransf',funcTransf)
+          assignin('base','funcTransfG',funcTransf)
           plot(funcTransf)
 end
