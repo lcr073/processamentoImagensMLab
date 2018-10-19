@@ -1,0 +1,41 @@
+function imgAmpl = ampliaImgDobro(imgOrig,freqCorte)
+
+       % Convertendo imagem para escala de cinza
+        imgOrigG = rgb2gray(imgOrig);
+       % imgOrigG = imgOrig;
+              
+       % Monta uma "imagem" do tamanho igual dobro da original
+       altImgOrig = size(imgOrigG,1);
+       LargImgOrig = size(imgOrigG,2);
+
+       % Gerando indice da imagem reduzida
+       linhaOrig = 1;
+       colOrig = 1;
+       
+       % Gerando a imagem reduzida "zerada"
+       imgAmpl = zeros(altImgOrig * 2, LargImgOrig * 2); 
+       
+       % for definimos o valorInicial:passo:valorFinal
+       for linhaImg = 1:2:altImgOrig * 2 -1 
+          for colImg = 1:2:LargImgOrig * 2 -1
+            % imgAmpl(linhaImg, colImg) = imgOrig(linhaOrig, colOrig);
+              linhaOrig
+              colOrig
+           %imgAmpl(linhaImg, colImg) = imgOrig(linhaImg, colImg);
+            colOrig = colOrig + 1;                       
+          end
+          lOrig = 1;
+          linhaOrig = linhaOrig + 1; 
+
+       end
+      
+       % Aplicando filtro passa baixa para tornar a redução melhor
+       %imgFilt = AplicaFPB(imgOrig, freqCorte);
+       
+       % Garantindo so a parte real
+       %imgOrigG = real(imgFilt);
+       
+         % manda o resultado para o Workspace
+          assignin('base','imgAmpl',imgAmpl)
+        %  plot(funcTransf)
+end

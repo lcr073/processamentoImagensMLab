@@ -1,7 +1,7 @@
-function [vec] = AplicaFPB(imgOrig, fCorte)
+function ImgFiltradaFPB = AplicaFPB(imgOrig, fCorte)
         
         % Convertendo imagem para escala de cinza
-        imgOrig = rgb2gray(imgOrig);
+        %imgOrig = rgb2gray(imgOrig);
         
         % Pega caracteristicas da imagem
         alt = size(imgOrig,1);
@@ -35,5 +35,6 @@ function [vec] = AplicaFPB(imgOrig, fCorte)
           % Salva a imagem filtrada
           assignin('base','ImgFiltradaFPB',FFT2IMG);
           
+          ImgFiltradaFPB = FFT2IMG;
           
 end
